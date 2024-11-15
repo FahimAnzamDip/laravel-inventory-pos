@@ -32,13 +32,15 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="total_amount">Total Amount <span class="text-danger">*</span></label>
-                                        <input id="total_amount" type="text" class="form-control" name="total_amount" value="{{ $total_amount }}" readonly required>
+                                        <input id="total_amount" type="text" class="form-control" name="total_amount" value="{{ $total_amount }}" readonly required hidden>
+                                        <input id="masked_total_amount" type="text" class="form-control" name="masked_total_amount" value="{{ format_currency($total_amount) }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="paid_amount">Received Amount <span class="text-danger">*</span></label>
-                                        <input id="paid_amount" type="text" class="form-control" name="paid_amount" value="{{ $total_amount }}" required>
+                                        <input id="paid_amount" type="text" class="form-control" name="paid_amount" value="{{ $total_amount }}" required hidden>
+                                        <input id="masked_paid_amount" type="text" class="form-control" name="masked_paid_amount" value="{{ format_currency($total_amount) }}">
                                     </div>
                                 </div>
                             </div>
